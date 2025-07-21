@@ -37,7 +37,13 @@
           container.innerHTML = "<p>No English articles found.</p>";
           return;
         }
-
+        
+          const filtered = data.items.filter(item => {
+          const text = (item.title + " " + item.description);
+          const lang = franc.min(text);
+          return lang === 'eng'; // only keep English articles
+        });
+        
         englishItems.slice(0, 20).forEach(item => {
           const div = document.createElement("div");
           div.className = "item";
