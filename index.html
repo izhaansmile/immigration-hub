@@ -19,7 +19,7 @@
 
       <script>
         async function loadRSS() {
-          const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.democracynow.org/democracynow.rss');
+          const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://documentedny.com/feed/');
           const data = await response.json();
           const container = document.getElementById("feed");
 
